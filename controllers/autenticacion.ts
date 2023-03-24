@@ -62,7 +62,7 @@ const login = async (req: Request, res: Response) => {
     await usuario.save();
 
     res.cookie("PoGO-AUTH", usuario.authentication.sessionToken, {
-      domain: process.env.FRONTEND_URL,
+      domain: process.env.AUTH_DOMAIN,
       path: "/",
     });
     return res.json(usuario);
@@ -75,7 +75,7 @@ const login = async (req: Request, res: Response) => {
 const logout = async (req: Request, res: Response) => {
   res.cookie("PoGO-AUTH", "", {
     expires: new Date(0),
-    domain: process.env.FRONTEND_URL,
+    domain: process.env.AUTH_DOMAIN,
     path: "/",
   });
   res.status(200).send("Cierre de sesión exitoso");
