@@ -11,7 +11,6 @@ const isAuthenticated = async (
 ) => {
   try {
     const sessionToken = req.cookies["PoGO-AUTH"];
-    console.log(sessionToken);
 
     if (!sessionToken) {
       return res.status(400).json({ error: "No se encontró la cookie" });
