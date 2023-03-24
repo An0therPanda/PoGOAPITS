@@ -65,7 +65,7 @@ const login = async (req: Request, res: Response) => {
       domain: process.env.AUTH_DOMAIN,
       path: "/",
     });
-    console.log(process.env);
+    console.log(usuario.authentication.sessionToken);
     return res.json(usuario);
   } catch (error) {
     console.error(error);
