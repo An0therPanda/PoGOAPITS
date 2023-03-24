@@ -1,10 +1,10 @@
 import express, { Express, Request, Response } from "express";
 import dotenv from "dotenv";
-import "./mongo";
 import cookieParser from "cookie-parser";
 import cors from "cors";
 
 dotenv.config();
+import "./mongo";
 
 const app: Express = express();
 const port = process.env.PORT;
