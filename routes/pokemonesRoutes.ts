@@ -1,3 +1,8 @@
+/*
+ * Fecha de creación: 23-03-2023
+ * Autor: Alfredo Leonelli
+ * Contacto: alfredoleonellim@gmail.com
+ */
 import express from "express";
 import * as pokemonesController from "../controllers/pokemones";
 import { isAuthenticated } from "../middlewares/auth";

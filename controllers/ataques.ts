@@ -1,3 +1,8 @@
+/*
+ * Fecha de creación: 23-03-2023
+ * Autor: Alfredo Leonelli
+ * Contacto: alfredoleonellim@gmail.com
+ */
 import { Request, response, Response } from "express";
 import { AtaqueCargado, IAtaqueCargado } from "../models/ataque_cargado";
 import { AtaqueRapido, IAtaqueRapido } from "../models/ataque_rapido";

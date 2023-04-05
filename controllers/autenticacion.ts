@@ -1,3 +1,8 @@
+/*
+ * Fecha de creación: 23-03-2023
+ * Autor: Alfredo Leonelli
+ * Contacto: alfredoleonellim@gmail.com
+ */
 import { Request, Response } from "express";
 import { createUser, getUsuarioByUsername } from "../models/usuarios";
 import { authentication, random } from "../helpers/helper";

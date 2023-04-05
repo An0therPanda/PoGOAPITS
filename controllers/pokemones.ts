@@ -1,3 +1,8 @@
+/*
+ * Fecha de creación: 23-03-2023
+ * Autor: Alfredo Leonelli
+ * Contacto: alfredoleonellim@gmail.com
+ */
 import { Request, Response } from "express";
 import { IAtaqueCargado } from "../models/ataque_cargado";
 import { IAtaqueRapido } from "../models/ataque_rapido";
@@ -174,9 +179,17 @@ const patchAtaquesPokemon = (req: Request, res: Response) => {
 
 const postAgregarPokemon = async (req: Request, res: Response) => {
   const nuevoPokemon: Partial<IPokemon> = req.body;
-  const pokemon = new Pokemon(nuevoPokemon);
 
   try {
+    const pokemonExistente = await Pokemon.findOne({
+      idpokedex: nuevoPokemon.idpokedex,
+    });
+    if (pokemonExistente) {
+      return res
+        .status(400)
+        .json({ mensaje: "Ya existe un Pokémon con ese ID" });
+    }
+    const pokemon = new Pokemon(nuevoPokemon);
     const pokemonGuardado = await pokemon.save();
     res.json(pokemonGuardado);
   } catch (error) {

@@ -1,3 +1,8 @@
+/*
+ * Fecha de creación: 23-03-2023
+ * Autor: Alfredo Leonelli
+ * Contacto: alfredoleonellim@gmail.com
+ */
 import { Request, response, Response } from "express";
 import { Eficacia_Entre_Tipos } from "../models/eficacia_entre_tipos";
 import { Tipo } from "../models/tipo";
